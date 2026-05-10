@@ -89,102 +89,11 @@ Mediterranean editorial warmth requires an elegant serif display font paired wit
     </noscript>
 
     <!--
-      Static JSON-LD snapshot for crawlers that don't execute JavaScript
-      (notably Bingbot's static crawler). The dynamic, data-driven version
-      is also rendered client-side by client/src/components/StructuredData.tsx
-      so room pricing and FAQs stay in sync. Multiple JSON-LD blocks with
-      stable @id values are deduped by search engines.
+      Structured data (BedAndBreakfast, Organization, WebSite, FAQPage) is
+      rendered by client/src/components/StructuredData.tsx and baked into
+      the prerendered HTML at build time, so it is always present in the
+      static markup without duplicating entities.
     -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BedAndBreakfast",
-      "@id": "https://cabastianfvg.com/#lodging",
-      "name": "Ca' Bastian Guest House",
-      "alternateName": "Ca' Bastian",
-      "description": "Antico casale a Moruzzo nel cuore delle colline moreniche del Friuli Venezia Giulia. Tre camere matrimoniali con bagno privato e una suite indipendente con angolo cottura.",
-      "url": "https://cabastianfvg.com/",
-      "image": ["https://cabastianfvg.com/hero-bg.webp"],
-      "logo": "https://cabastianfvg.com/hero-bg.webp",
-      "telephone": "+39 350 1107912",
-      "email": "infocabastian.fvg@gmail.com",
-      "priceRange": "€170 – €200",
-      "currenciesAccepted": "EUR",
-      "paymentAccepted": "Cash, Credit Card, Bank Transfer",
-      "numberOfRooms": 4,
-      "petsAllowed": false,
-      "smokingAllowed": false,
-      "checkinTime": "16:00",
-      "checkoutTime": "10:00",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Via Coranzano 48",
-        "addressLocality": "Moruzzo",
-        "addressRegion": "UD",
-        "postalCode": "33030",
-        "addressCountry": "IT"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 46.0928,
-        "longitude": 13.1378
-      },
-      "areaServed": {
-        "@type": "AdministrativeArea",
-        "name": "Friuli Venezia Giulia"
-      },
-      "identifier": [
-        { "@type": "PropertyValue", "name": "CIN", "value": "IT030063B4RN48AERS" }
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "bestRating": "5",
-        "worstRating": "1",
-        "reviewCount": "48"
-      }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "@id": "https://cabastianfvg.com/#organization",
-      "name": "Ca' Bastian Guest House",
-      "url": "https://cabastianfvg.com/",
-      "logo": "https://cabastianfvg.com/hero-bg.webp",
-      "email": "infocabastian.fvg@gmail.com",
-      "telephone": "+39 350 1107912",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Via Coranzano 48",
-        "addressLocality": "Moruzzo",
-        "addressRegion": "UD",
-        "postalCode": "33030",
-        "addressCountry": "IT"
-      },
-      "contactPoint": [{
-        "@type": "ContactPoint",
-        "telephone": "+39 350 1107912",
-        "email": "infocabastian.fvg@gmail.com",
-        "contactType": "reservations",
-        "areaServed": "IT",
-        "availableLanguage": ["Italian", "English"]
-      }]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "@id": "https://cabastianfvg.com/#website",
-      "url": "https://cabastianfvg.com/",
-      "name": "Ca' Bastian Guest House",
-      "inLanguage": "it-IT",
-      "publisher": { "@id": "https://cabastianfvg.com/#organization" }
-    }
-    </script>
-
     <script type="module" crossorigin src="/assets/index-B-WTQL38.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-DvFQpRio.css">
   </head>
